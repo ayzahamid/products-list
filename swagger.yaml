@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Products API
+  version: 1.0.0
+paths:
+  /v1/products:
+    get:
+      summary: Get all products
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                $ref: '#/components/schemas/ProductArray'
+              example:
+                - id: 1
+                  name: Rice (1kg bag)
+                  price: 4
+                - id: 2
+                  name: Potatoes (2kg bag)
+                  price: 5
+                - id: 3
+                  name: Beans (tinned)
+                  price: 1.5
+                - id: 4
+                  name: Milk (1 litre)
+                  price: 3.2
+    post:
+      summary: Create a new product
+      parameters:
+        - name: id
+          in: path
+          description: The ID of the product
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: Created
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        price:
+          type: number
+    ProductArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/Product'
