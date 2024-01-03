@@ -1,24 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
+
+This is a Next.js application for managing products.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/project-name.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Change to the project directory:
+   ```bash
+   cd project-name
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+    ```
+
+
+5. Open your browser and visit `http://localhost:3000` to see the application.
+
+## Running Prism Mock Server
+
+To run the Prism mock server using Docker Compose, follow these steps:
+
+1. Make sure you have Docker installed on your machine.
+
+2. Update the Swagger file:
+   - Open the `swagger.yaml` file.
+   - Modify the Swagger specification as needed for your API.
+   - Save the changes.
+
+3. Start the Prism mock server:
+   - Open a terminal and navigate to the project directory.
+   - Run the following command:
+     ```bash
+     docker-compose up -d prism
+     ```
+
+4. The Prism mock server should now be running. You can access it at `http://localhost:4010`.
+
+## Your task
+See the instructions in [Instructions](INSTRUCTIONS.md)
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to customize the instructions and add any additional information specific to your project.
 
 ## Learn More
 
